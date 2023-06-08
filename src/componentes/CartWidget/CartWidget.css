@@ -1,0 +1,12 @@
+img{
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+div{
+    display: inline;
+}
+strong{
+    margin-right: 25px;
+}
