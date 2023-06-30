@@ -1,8 +1,24 @@
 import './ItemListConteiner.css';
+import { useState, useEffect } from 'react';
+import { getProductos, getCategoria } from '../../asyncmoks';
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
 
-const ItemListConteiner = (props) => {
+const ItemListConteiner = ({greeting}) => {
+  const [Stock, setStock] = useState([]);
+
+  const {categoria} = useParams();
+
+  useEffect(()=>{
+    const funcionProductos = categoria ? getCategoria : getProductos;
+    funcionProductos(categoria)
+      .then(res => setStock(res))
+      .catch(error => console.log(error))
+  }, [categoria])
+
   return (
-    <h3>{props.alerta}</h3>
+    <h2> {greering} </h2>
+   // <ItemList productos={Stock}/>
   )
 }
 
