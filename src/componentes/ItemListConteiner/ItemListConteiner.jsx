@@ -1,25 +1,26 @@
-import './ItemListConteiner.css';
-import { useState, useEffect } from 'react';
-import { getProductos, getCategoria } from '../../asyncmoks';
-import { useParams } from 'react-router-dom';
-import ItemList from '../ItemList/ItemList';
+import { useState, useEffect } from 'react'
+import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
+import { getProductos, getCategoria } from '../../asyncmoks'
 
-const ItemListConteiner = ({greeting}) => {
-  const [Stock, setStock] = useState([]);
+const ItemListContainer = () => {
+    const [productos, setProductos] = useState([]);
+    const { idCategoria } = useParams();
 
-  const {categoria} = useParams();
+    useEffect(() => {
+        const funcionProductos = idCategoria ? getCategoria : getProductos;
 
-  useEffect(()=>{
-    const funcionProductos = categoria ? getCategoria : getProductos;
-    funcionProductos(categoria)
-      .then(res => setStock(res))
-      .catch(error => console.log(error))
-  }, [categoria])
+        funcionProductos(idCategoria)
+            .then(res => setProductos(res))
+            .catch(error => console.log(error))
+    }, [idCategoria])
 
-  return (
-    <h2> {greering} </h2>
-   // <ItemList productos={Stock}/>
-  )
+    return (
+        <>
+            <h2 style={{ textAlign: "center" }}> Mis productos </h2>
+            <ItemList productos={productos} />
+        </>
+    )
 }
 
-export default ItemListConteiner
+export default ItemListContainer

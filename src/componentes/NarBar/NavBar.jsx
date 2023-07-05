@@ -4,9 +4,9 @@ import { Link, NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <header>
-        <link to={"/"}>
+        <Link to={"/"}>
         <h1>BTB</h1>
-        </link>
+        </Link>
         
         <nav>
             <ul>

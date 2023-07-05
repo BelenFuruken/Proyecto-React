@@ -39,7 +39,7 @@ export const getProductos = () =>{
 }
 
 export const getUnProducto = (id) =>{
-    return new promise (resolve => {
+    return new Promise (resolve => {
         setTimeout(()=>{
             const producto = Stock.find(prod => prod.id === id);
         }, 250)
@@ -47,7 +47,7 @@ export const getUnProducto = (id) =>{
 }
 
 export const getCategoria = (idCategoria) =>{
-    return new promise (resolve => {
+    return new Promise (resolve => {
         setTimeout(()=>{
             const productosCategoria = Stock.filter(prod => prod.categoria === idCategoria);
             resolve(productosCategoria);

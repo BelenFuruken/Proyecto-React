@@ -1,24 +1,18 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import { Stock } from '../../asyncmoks'
 
-const Item = () => {
-  return (
-    <div>
-        <h2>TODOS LOS PRODUCTOS</h2>
-        <ul>
+const Item = ({ id, nombre, precio, imagen }) => {
+    return (
+        <div className='cardProducto'>
+            <img className='imgProducto' src={imagen} alt={nombre} />
+            <h3>Nombre: {nombre} </h3>
+            <p>Precio: {precio} </p>
+            <p>ID: {id} </p>
             {
-                Stock.map((producto, index)=>{
-                    <li key={index}>
-                        <p>{producto.nombre}</p>
-                        <p>{producto.precio}</p>
-                        <img src={producto.imagen} alt="" />
-                    </li>
-                })
+                //<button className='btnProducto'> Ver Detalles </button>
             }
-        </ul>
-    </div>
-  )
+            <Link to={`/item/${id}`}> Ver Detalles</Link>
+        </div>
+    )
 }
 
 export default Item
