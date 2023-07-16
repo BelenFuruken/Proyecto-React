@@ -6,14 +6,16 @@ import { useParams } from "react-router-dom"
 const ItemDetailCounteiner = () => {
   const [Stock, setStock] = useState(null);
   const {id} = useParams();
+
   useEffect(()=>{
     getUnProducto(id)
       .then(res=>setStock(res))
       .catch(error=>console.log(error))
   }, [id])
+
   return (
-    <div>ItemDetail</div>
-  )
+    <ItemDetail {...Stock} ></ItemDetail>
+    )
 }
 
-export default ItemDetail
+export default ItemDetailCounteiner 

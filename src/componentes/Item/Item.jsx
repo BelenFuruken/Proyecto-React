@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import './Item.css'
 
 const Item = ({ id, nombre, precio, imagen }) => {
     return (
@@ -16,3 +17,4 @@ const Item = ({ id, nombre, precio, imagen }) => {
 }
 
 export default Item
+            
