@@ -14,7 +14,7 @@ const NavBar = () => {
                   <NavLink to={'/categoria/1'}>Parte Superior</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/categoria/1'}>Parte inferior</NavLink>
+                  <NavLink to={'/categoria/2'}>Parte inferior</NavLink>
                 </li>
             </ul>
             <CartWidget/>
