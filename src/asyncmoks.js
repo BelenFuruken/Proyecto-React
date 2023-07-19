@@ -3,7 +3,7 @@ export const Stock = [
         id: "1",
         nombre: 'Remera',
         precio: 8000,
-        imagen: '../image/remera.JPG',
+        imagen: '/image/remera.JPG',
         stock: 10,
         categoria: "1"
         
@@ -12,7 +12,7 @@ export const Stock = [
         id: "2",
         nombre: 'Short',
         precio: 12000,
-        imagen: '../image/short.JPG',
+        imagen: '/image/short.JPG',
         stock: 6,
         categoria: "2"
         
@@ -21,7 +21,7 @@ export const Stock = [
         id: "3",
         nombre: 'Hoodies',
         precio: 20000,
-        imagen: '../image/hoodie.JPG',
+        imagen: '/image/hoodie.JPG',
         stock: 7,
         categoria: "1"
         
@@ -30,7 +30,7 @@ export const Stock = [
         id: "4",
         nombre: 'Casacas',
         precio: 17000,
-        imagen: '../image/casaca.JPG',
+        imagen: '/image/casaca.JPG',
         stock: 20,
         categoria: "1"
         
