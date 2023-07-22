@@ -1,7 +1,7 @@
 .cardProducto{
     background: #191c29;
-	width: 500px;
-	height: 700px;
+	width: 400px;
+	height: 500px;
 	margin: 10px;
 	padding: 10px 3px;
 	border-radius: 10px;
@@ -14,4 +14,10 @@
 .imgProducto{
 	width: 300px;
     height: 300px;
+}
+.VerDetalles{
+	margin: 10px;
+	padding: 10px;
+	color: white;
+	border: solid white;
 }

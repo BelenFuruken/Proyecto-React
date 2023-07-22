@@ -25,24 +25,12 @@ const ItemListConteiner = () => {
 
     return (
         <>
-            <h2 style={{ textAlign: "center" }}> Mis productos </h2>
+            <h2 style={{ textAlign: "center" }}> BACK TO BASIC </h2>
             <div className='card-items'>
             <ItemList productos={productos}/>     
             </div>
-           
         </>
     )
 }
 
 export default ItemListConteiner
-
-
-    /*
-    useEffect(() => {
-        const funcionProductos = idCategoria ? getCategoria : getProductos;
-
-        funcionProductos(idCategoria)
-            .then(res => setProductos(res))
-            .catch(error => console.log(error))
-    }, [idCategoria])
-    */
