@@ -11,9 +11,9 @@ export const CarritoContext = createContext({
 //Creamos el COMPONENTE que va a manejar el carrito y va a devolver el carrito.
 export const CarritoProvider = ({children}) =>{
     const [carrito, setCarrito] = useState([]); //Estado para almacenar el carrito de compras
-    console.log(carrito);
     const [total, setTotal] = useState(0);
     const [cantidadTotal, setcantidadTotal] = useState(0);
+    console.log(carrito);
 
     //FUNCIONES PARA MANEJAR EL CARRITO (pide la consigna):
     const agregarProducto = (item, cantidad) => {
